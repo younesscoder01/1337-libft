@@ -18,8 +18,6 @@ SRC_B = ./ft_lstadd_back_bonus.c ./ft_lstadd_front_bonus.c \
 
 NAME = libft.a
 
-SO_NAME = libft.so
-
 OBJS = $(SRC:.c=.o)
 
 OBJS_B = $(SRC_B:.c=.o)
@@ -27,15 +25,10 @@ OBJS_B = $(SRC_B:.c=.o)
 $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
 
-$(SO_NAME): $(OBJS) $(OBJS_B)
-	@$(CC) -shared -o $(SO_NAME) $(OBJS) $(OBJS_B)
-
 all: $(NAME)
 
 bonus: $(OBJS_B)
 	@$(AR) $(NAME) $(OBJS_B)
-
-so: $(SO_NAME)
 
 clean:
 	@$(RM) $(OBJS) $(OBJS_B)

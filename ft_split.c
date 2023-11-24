@@ -12,6 +12,19 @@
 
 #include "libft.h"
 
+void	ft_free(char **arr)
+{
+	int	i;
+
+	i = 0;
+	while (arr[i])
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
+}
+
 static int	word_count(char const *str, char c)
 {
 	int	i;
@@ -48,6 +61,11 @@ static void	ft_allocate(char **arrstr, char const *s, char sep)
 		if ((*temp == sep || *temp == '\0') && temp > s)
 		{
 			*arrstr = ft_substr(s, 0, temp - s);
+			if (*arrstr == NULL)
+			{
+				ft_free(arrstr);
+				return ;
+			}
 			s = temp;
 			arrstr++;
 		}
