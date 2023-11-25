@@ -22,7 +22,6 @@ OBJS = $(SRC:.c=.o)
 
 OBJS_B = $(SRC_B:.c=.o)
 
-all: $(NAME) bonus
 
 $(NAME): $(OBJS)
 
@@ -32,6 +31,8 @@ $(NAME): $(OBJS)
 	$(AR) $(NAME) $@
 
 bonus: $(OBJS_B)
+
+all: $(NAME) bonus
 
 clean:
 	@$(RM) $(OBJS) $(OBJS_B)
