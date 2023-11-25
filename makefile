@@ -1,5 +1,5 @@
-CFLAGS += -Wall -Wextra -Werror
-CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+CC = cc
 AR = ar -crs
 RM = rm -f
 SRC = ./ft_atoi.c ./ft_bzero.c ./ft_calloc.c ./ft_isalnum.c ./ft_isalpha.c \
@@ -22,13 +22,16 @@ OBJS = $(SRC:.c=.o)
 
 OBJS_B = $(SRC_B:.c=.o)
 
-$(NAME): $(OBJS)
-	@$(AR) $(NAME) $(OBJS)
+all: $(NAME) bonus
 
-all: $(NAME)
+$(NAME): $(OBJS)
+
+
+.c.o:
+	$(CC) $(CFLAGS) -c -o $@ $^
+	$(AR) $(NAME) $@
 
 bonus: $(OBJS_B)
-	@$(AR) $(NAME) $(OBJS_B)
 
 clean:
 	@$(RM) $(OBJS) $(OBJS_B)

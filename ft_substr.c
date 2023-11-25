@@ -6,7 +6,7 @@
 /*   By: ysahraou <ysahraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:12:33 by ysahraou          #+#    #+#             */
-/*   Updated: 2023/11/23 11:50:55 by ysahraou         ###   ########.fr       */
+/*   Updated: 2023/11/25 14:35:37 by ysahraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!subs)
 		return (NULL);
 	i = 0;
-	while (len > i && start < len_s)
+	while (size > i && start < len_s)
 		subs[i++] = s[start++];
 	subs[i] = '\0';
 	return (subs);
