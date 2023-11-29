@@ -6,7 +6,7 @@
 /*   By: ysahraou <ysahraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:10:36 by ysahraou          #+#    #+#             */
-/*   Updated: 2023/11/22 17:43:15 by ysahraou         ###   ########.fr       */
+/*   Updated: 2023/11/29 14:27:24 by ysahraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (!s)
+	if (!s || fd < 0)
 		return ;
 	while (*s)
 	{

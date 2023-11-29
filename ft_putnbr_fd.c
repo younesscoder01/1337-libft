@@ -6,7 +6,7 @@
 /*   By: ysahraou <ysahraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:13:04 by ysahraou          #+#    #+#             */
-/*   Updated: 2023/11/25 16:14:45 by ysahraou         ###   ########.fr       */
+/*   Updated: 2023/11/29 14:27:18 by ysahraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
 
+	if (fd < 0)
+		return ;
 	c = '0';
 	if (n >= 0 && n <= 9)
 	{

@@ -6,7 +6,7 @@
 /*   By: ysahraou <ysahraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:49:12 by ysahraou          #+#    #+#             */
-/*   Updated: 2023/11/22 17:39:38 by ysahraou         ###   ########.fr       */
+/*   Updated: 2023/11/29 14:07:53 by ysahraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		index;
 	char	*str;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	index = 0;
 	slen = ft_strlen(s);

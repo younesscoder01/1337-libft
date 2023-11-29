@@ -6,7 +6,7 @@
 /*   By: ysahraou <ysahraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:40:39 by ysahraou          #+#    #+#             */
-/*   Updated: 2023/11/22 10:24:24 by ysahraou         ###   ########.fr       */
+/*   Updated: 2023/11/29 14:48:14 by ysahraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdbool.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stddef.h>
+# include <stdint.h>
 
 typedef struct s_list
 {

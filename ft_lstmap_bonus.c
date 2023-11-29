@@ -6,7 +6,7 @@
 /*   By: ysahraou <ysahraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 10:53:12 by ysahraou          #+#    #+#             */
-/*   Updated: 2023/11/20 14:52:23 by ysahraou         ###   ########.fr       */
+/*   Updated: 2023/11/29 14:03:06 by ysahraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new;
 	t_list	*temp;
 
-	if (!f || !lst)
+	if (!f || !lst || !del)
 		return (NULL);
 	new = NULL;
 	while (lst)
@@ -25,7 +25,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		temp = ft_lstnew(f(lst->content));
 		if (!temp)
 		{
-			ft_lstclear(&temp, (*del));
+			ft_lstclear(&new, (*del));
 			return (NULL);
 		}
 		ft_lstadd_back(&new, temp);

@@ -6,7 +6,7 @@
 /*   By: ysahraou <ysahraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 14:11:39 by ysahraou          #+#    #+#             */
-/*   Updated: 2023/11/20 14:52:06 by ysahraou         ###   ########.fr       */
+/*   Updated: 2023/11/29 14:02:07 by ysahraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*temp;
 
-	if (!lst)
+	if (!lst || !del)
 		return ;
 	while (*lst)
 	{

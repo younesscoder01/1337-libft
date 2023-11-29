@@ -6,7 +6,7 @@
 /*   By: ysahraou <ysahraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:07:00 by ysahraou          #+#    #+#             */
-/*   Updated: 2023/11/22 17:42:21 by ysahraou         ###   ########.fr       */
+/*   Updated: 2023/11/29 14:14:42 by ysahraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (!s)
+	if (!s || fd < 0)
 		return ;
 	while (*s)
 	{
