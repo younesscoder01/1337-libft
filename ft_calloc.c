@@ -6,7 +6,7 @@
 /*   By: ysahraou <ysahraou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:41:55 by ysahraou          #+#    #+#             */
-/*   Updated: 2023/11/29 14:48:39 by ysahraou         ###   ########.fr       */
+/*   Updated: 2023/12/04 13:08:29 by ysahraou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,12 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 
 	if (size > 0 && SIZE_MAX / size < nmemb)
-        return (0);
+		return (0);
+	if (size == 0 || nmemb == 0)
+	{
+		size = 1;
+		nmemb = 1;
+	}
 	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
 		return (ptr);
